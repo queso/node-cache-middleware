@@ -89,6 +89,7 @@ function middleware(options) {
 /* adds a special property to `res` that keeps track of all the response data
    written */
 function appendWrites(res, data) {
+  "use strict";
   if (!data) {
     return;
   }
