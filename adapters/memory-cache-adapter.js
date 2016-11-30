@@ -15,7 +15,7 @@ function MemoryCacheAdapter() {
 
 MemoryCacheAdapter.prototype.get = key => Promise.resolve(cache.get(key));
 
-MemoryCacheAdapter.prototype.set = function(key, data, durationMilliseconds) => {
+MemoryCacheAdapter.prototype.set = function(key, data, durationMilliseconds) {
     return Promise.resolve(cache.put(key, data, durationMilliseconds));
 }
 
