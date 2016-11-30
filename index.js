@@ -27,6 +27,7 @@ const queue = {};
 
 function sendCacheData(res, cacheData) {
   res.statusCode = cacheData.statusCode
+  console.log(cachedData);
   res.writeHead(cacheData.headers);
   res.end(new Buffer(cacheData.content, "base64"))
 }
