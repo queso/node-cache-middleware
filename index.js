@@ -49,8 +49,10 @@ function middleware(options) {
 
     const cacheKey = options.keyFunction(req);
 
+    console.log(cacheKey);
     cache.get(cacheKey).then(data => {
       if (data) {
+        console.log(data);
         sendCacheData(res, data);
         return;
       }
