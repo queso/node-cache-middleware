@@ -17,8 +17,8 @@ const DEFAULT_OPTIONS = {
   // Cache key
   keyFunction: req => [
     req.originalUrl,
-    req.header('accepts'),
-    req.header('accept-encoding')
+    req.headers.accept,
+    req.headers['accept-encoding']
   ].join('.')
 };
 
